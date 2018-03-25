@@ -120,6 +120,8 @@ In **breadth first search**, we pick an arbitrary node as the root and explore e
 
 **Implementation:**
 ```python
+from collections import deque
+
 '''
 Assuming we have a directed graph represented with an adjacency list.
 
@@ -131,17 +133,16 @@ graph = {'A': ['B', 'C'],
 '''
   
 def breadth_first_search(graph, start):  
-    visited, stack = set(), [start] 
-    while stack:
-        vertex = stack.pop(0)
-        if vertex not in visited:
+    visited, queue = set(), deque(start)
+    while queue:
+        vertex = queue.popLeft()
             visited.add(vertex)
             # If a node with no outgoing edges won't be 
             # included in the adjacency list, we need to check
             if vertex in graph:
                 for neighbor in graph[vertex]:
                     if neighbor not in visited:
-                        stack.append(neighbor)
+                        queue.append(neighbor)
     return visited
 ```
 
@@ -163,16 +164,37 @@ An application of this algorithm would be trying to order a sequence of tasks gi
 
 *Insert graph here*
 
-### Implementation
+### Implementation:
 The algorithm behind how to do this is simply a modification of DFS. 
 
+#### Graph with no cycles
+```python
+from collections import deque
+
+def top_sort(graph):
+  sorted_nodes, visited = deque(), set()
+  for node in graph.keys():
+      if node not in visited:
+        dfs(graph, node, visited, sorted_nodes)
+  return list(sorted_nodes)
+ 
+
+def dfs(graph, start_node, visited, sorted\_nodes):
+  visited.add(start_node)
+  if start_node in graph:
+      neighbors = graph[start_node]
+  for neighbor in neighbors:
+      if neighbor not in visited:
+          dfs(graph, neighbor, visited, sorted_nodes)
+  sorted_nodes.appendleft(start_node)
+```
+
+
+#### Graph with cycles
 *Insert topological sort code here*
 
 
-Topological sorts are commonly used on questions that require an ordering of dependencies or checking that such an ordering is even possible.
-
 **Example interview question using topological sorting:**
-* [Given a sorted dictionary of an alien language, find order of characters](https://www.geeksforgeeks.org/given-sorted-dictionary-find-precedence-characters/)
 ## Glossary
 1. **vertex (a.k.a. node):** used to represent one data point
 2. **edge:** connections between pairs of vertices
