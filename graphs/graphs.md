@@ -47,18 +47,18 @@ A commonly used phrase when referring to graphs is a **directed acylic graph (DA
 ### Adjacency lists
 **Adjacency list** is the most common way to represent graphs. With this approach of representing a graph, each node stores a list of its adjacent vertices. For undirected graphs, each edge from _u_ to _v_ would be stored twice: once in _u_'s list of neighbors and once in _v_'s list of neighbors.
 
-*Insert diagram here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/adjacency_list_graph.png"/>
 
 ### Edge sets/ lists
 An **edge set** simply represents a graph as a collection of all its edges.
 
-*Insert diagram here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/edge_set_graph.png"/>
 
 
 ### Adjacency matrix
 An **adjacency matrix** represents a graph with _n_ nodes as a _n_ by _n_ boolean matrix, in which matrix[_u_][_v_] is set to true if an edge exists from node _u_ to node _v_.
 
-*Insert diagram here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/adjacency_matrix_graph.png"/>
 
 The representation of a graph is efficient for checking if an edge exists between a pair of vertices. However, it may be less efficient for search algorithms because it requires iterating through all the nodes in the graph to identify a node's neighbors.
 
