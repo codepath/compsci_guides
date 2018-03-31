@@ -65,11 +65,11 @@ The representation of a graph is efficient for checking if an edge exists betwee
 ### Runtime Analysis
 
 
-|  Representation | Column 2 | Traversing entire graph | hasEdge(u, v) | Space    |
-| --------              | -------- | -------- | --------      | -------- |
-| **Adjacency matrix**  | Text | O(V<sup>2</sup>)| O(1) | O(V<sup>2</sup>)|
-| **Edge Set**          | Text     | O(E)     | O(E)          | O(E)
-| **Adjacency List**    | Text     | O(V + E)     | O(max number of edges a vertex has)  | O(E + V)
+|  Representation       | Column 2 | Traversing entire graph | hasEdge(u, v) | Space    |
+| --------              | -------- | --------                | --------      | -------- |
+| **Adjacency matrix**  | Text     | O(V<sup>2</sup>)        | O(1)          | O(V<sup>2</sup>)|
+| **Edge Set**          | Text     | O(E)                    | O(E)          | O(E)
+| **Adjacency List**    | Text     | O(V + E)                | O(max number of edges a vertex has)  | O(E + V)
 Credit: [UC Berkeley data structures course](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew)
  
 
@@ -79,7 +79,7 @@ These traversal algorithms are conceptually the same as the ones introduced in t
 ### Depth first search
 In a **depth first search**, we start with an arbitrary node as a root and explore each neighbor fully before exploring the next one. 
 
-*Insert graphic here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/graphs_dfs.png" width="544" height="350"/>
 
 **Implementation:**
 ```python
