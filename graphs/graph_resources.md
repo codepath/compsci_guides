@@ -23,10 +23,13 @@
 ## Extra graph algorithms
 **NOTE**: This section covers algorithms that will generally not come up in interviews.
 ### Union find, disjoint sets
+Guide:https://www.hackerearth.com/practice/notes/disjoint-set-union-union-find/
+Interview question bank: https://leetcode.com/tag/union-find/
 
 ### Shortest paths algorithms
+Guide: https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/tutorial/
+Interview question bank: https://www.hackerearth.com/practice/algorithms/graphs/shortest-path-algorithms/practice-problems/
 
 ### Minimum spanning tree algorithms
-
-
-## Resources
+Guide: https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/tutorial/
+Interview question bank: https://www.hackerearth.com/practice/algorithms/graphs/minimum-spanning-tree/practice-problems/
