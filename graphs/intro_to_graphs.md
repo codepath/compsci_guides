@@ -12,8 +12,7 @@ Graphs consist of a set of..
     * Nodes that are directly connected by an edge are commonly referred to as **neighbors**.
 * **edges**, connections between pairs of vertices
 
-**![](https://lh4.googleusercontent.com/k-g2IQwT-LzoLAlxjvNdw-J4_FAOdKgq_YHTOgV36ku2oKCKpGIT_gU3lRGvsokF2zhXtss-hK7xNjD_xPguZlzMMHr6JDwxZkEwkjO6_aDI59DjJg15Zk0TDbIIlb5QazloMtJFHig)**
-
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/basic_graph.png" width="472" height="350"/>
 
 ## Graph types
 
