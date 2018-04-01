@@ -72,7 +72,7 @@ def breadth_first_search(graph, start):
 ```
 
 
-**Example interview question using DFS:**
+**Example interview question using BFS:**
 
 
 **Runtime**: O(V + E)
