@@ -4,7 +4,7 @@ These traversal algorithms are conceptually the same as the ones introduced in t
 ## Depth first search
 In a **depth first search**, we start with an arbitrary node as a root and explore each neighbor fully before exploring the next one. 
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/graphs_dfs.png" width="544" height="350"/>
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/dfs_graph.png" width="544" height="350"/>
 
 **Implementation:**
 ```python
@@ -41,7 +41,7 @@ def depth_first_search(graph, start):
 ## Breadth first search
 In **breadth first search**, we pick an arbitrary node as the root and explore each of its neighbors before visiting their children. Breadth first search is the better of the two algorithms at finding the shortest path between two nodes.
 
-*Insert graphic here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/bfs_graph.png" width="679" height="350"/>
 
 **Implementation:**
 ```python
