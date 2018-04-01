@@ -3,7 +3,7 @@
 
 Graphs are one of the most prevalent data structures in computer science. It's a powerful data structure that's utilized to represent relationships between different types of data. In a graph, each data point is stored as a **node** and each relationship between those data points is represented by an **edge**. For example, a social network is considered a graph in which each person is considered a node and a friendship between two people is considered an edge.
 
-For interviews, it is vital to know how to implement a graph, basic graph traversals (BFS, DFS) and how to topologically sort the graph.
+Graphs are best utilized for problems in which there are binary relationships between objects. Once a problem can be represented as a graph, the problem can generally be solved based off of one of the key graph algorithms. For interviews, it is vital to know how to implement a graph, basic graph traversals (BFS, DFS) and how to topologically sort the graph.
 
 # Graph Terminology
 ## Graph components
