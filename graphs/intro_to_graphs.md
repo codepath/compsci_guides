@@ -56,10 +56,12 @@ An **adjacency matrix** represents a graph with _n_ nodes as a _n_ by _n_ boolea
 The representation of a graph is efficient for checking if an edge exists between a pair of vertices. However, it may be less efficient for search algorithms because it requires iterating through all the nodes in the graph to identify a node's neighbors.
 
 ## Runtime Analysis
-|  Representation       | Column 2 | Traversing entire graph | hasEdge(u, v) | Space    |
+Below is a chart of the most common graph operations and their runtimes for each of the graph representations. In the chart below, _V_ represents the number of verticies in the graph and _E_ represents the number of edges in the graph.
+
+|  Representation       | Getting all adjacent edges for a vertex| Traversing entire graph | hasEdge(u, v) | Space    |
 | --------              | -------- | --------                | --------      | -------- |
-| **Adjacency matrix**  | Text     | O(V<sup>2</sup>)        | O(1)          | O(V<sup>2</sup>)|
-| **Edge Set**          | Text     | O(E)                    | O(E)          | O(E)
-| **Adjacency List**    | Text     | O(V + E)                | O(max number of edges a vertex has)  | O(E + V)
+| **Adjacency matrix**  | O(V)     | O(V<sup>2</sup>)        | O(1)          | O(V<sup>2</sup>)|
+| **Edge Set**          | O(E)     | O(E)                    | O(E)          | O(E)
+| **Adjacency List**    | O(1)     | O(V + E)                | O(max number of edges a vertex has)  | O(E + V)
 
 Credit: [UC Berkeley data structures course](https://docs.google.com/presentation/d/1GOOt1Ierm9jJFq9o26uRW20GdU6E5hrAZvsoQIreJew)
