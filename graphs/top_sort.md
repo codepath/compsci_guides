@@ -1,17 +1,17 @@
-## Topological Sorting
+# Topological Sorting
 Aside from DFS and BFS, the most common graph concept that interviews will test is topological sorting. The objective of this algorithm is to produce an ordering of nodes in a directed graph such that the direction of nodes is respected. 
 
 A **topological sort** is an ordering of nodes for a directed acyclic graph (DAG) such that for every directed edge _uv_ from vertex _u_ to vertex _v_, _u_ comes before _v_ in the ordering.
 
-### Example
+## Example
 An application of this algorithm would be trying to order a sequence of tasks given their dependencies on other tasks. In this application, there is an directed edge from _u_ to _v_ if task _u_ must be completed before task _v_ can start. For example, when cooking, we need to turn on the oven (task _u_) before we can bake the cookies (task _v_).
 
-*Insert graph here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/top_sort_graph.png"/>
 
-### Implementation:
-The algorithm behind how to do this is simply a modification of DFS. 
+## Implementation:
+The algorithm behind how to do this is simply a modification of DFS.
 
-#### Graph with no cycles
+### Graph with no cycles
 ```python
 from collections import deque
 
@@ -33,6 +33,3 @@ def dfs(graph, start_node, visited, sorted\_nodes):
   sorted_nodes.appendleft(start_node)
 ```
 
-
-#### Graph with cycles
-*Insert topological sort code here*
