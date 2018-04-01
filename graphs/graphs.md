@@ -22,22 +22,18 @@ Graphs consist of a set of..
 #### Directed & undirected graphs
 A **directed** graph is a graph that in which all edges are associated with a direction. An example of a directed edge would be a one way street.
 
-*insert graphic here*
-
 An **undirected** graph is a graph in which all edges do not have a direction. An example of this would be a friendship!
 
-*insert graphic here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/directed_undirected_graph.png" width="486" height="380"/>
 
 #### Cyclic & acyclic graphs
 Before going over the what cyclic and acyclic graphs are, there are two key terms to cover: **path** and **cycle**. A **path** is a sequence of vertices connected by edges and a **cycle**  a path whose first and last vertices are the same.
 
 A **cyclic** graph means that there contains a least one cycle within the graph.
 
-*insert graph here*
-
 An **acyclic** graph has no cycles within it.
 
-*insert graph here*
+<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/acyclic_cyclic_graph.png" width="486" height="380"/>
 
 A commonly used phrase when referring to graphs is a **directed acylic graph (DAG)**, which is a directed graph in which there are *no* cycles. In a DAG, these two terms are commonly used to denote nodes with special properties:
 * **Sink** nodes have no outgoing edges, only incoming edges
