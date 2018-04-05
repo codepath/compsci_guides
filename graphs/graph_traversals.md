@@ -39,7 +39,7 @@ def depth_first_search(graph, start):
 * [Detect a cycle in a graph](https://www.geeksforgeeks.org/detect-cycle-in-a-graph/) 
 
 ## Breadth first search
-In **breadth first search**, we pick an arbitrary node as the root and explore each of its neighbors before visiting their children. Breadth first search is the better of the two algorithms at finding the shortest path between two nodes.
+In **breadth first search**, we pick an arbitrary node as the root and explore each of its neighbors before visiting their children. Breadth first search is the better suited at finding the shortest path between two nodes.
 
 <img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/bfs_graph.png" width="679" height="350"/>
 
