@@ -1,4 +1,4 @@
-## Glossary - EDITS
+## Glossary
 1. **vertex (node):** used to represent a single data point
 2. **edge:** a connection between a pair of vertices
 3. **neighbor:** a neighbor node is a node that is directly connected to another node by an edge
