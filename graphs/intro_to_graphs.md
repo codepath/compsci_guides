@@ -12,7 +12,7 @@ Graphs consist of a set of..
     * Nodes that are directly connected by an edge are commonly referred to as **neighbors**.
 * **edges**, connections between pairs of vertices
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/basic_graph.png" width="472" height="350"/>
+<img src="https://imgur.com/Zq3wULu" width="472" height="350"/>
 
 ## Graph types
 
@@ -21,7 +21,7 @@ A **directed** graph is a graph that in which all edges are associated with a di
 
 An **undirected** graph is a graph in which all edges do not have a direction. An example of this would be a friendship!
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/directed_undirected_graph.png" width="486" height="380"/>
+<img src="https://imgur.com/JWL96oK" width="486" height="380"/>
 
 ### Cyclic & acyclic graphs
 Before going over the what cyclic and acyclic graphs are, there are two key terms to cover: **path** and **cycle**. A **path** is a sequence of vertices connected by edges and a **cycle**  a path whose first and last vertices are the same.
@@ -30,7 +30,7 @@ A **cyclic** graph means that there contains a least one cycle within the graph.
 
 An **acyclic** graph has no cycles within it.
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/acyclic_cyclic_graph.png" width="486" height="380"/>
+<img src="https://imgur.com/2z9J2E5" width="486" height="380"/>
 
 A commonly used phrase when referring to graphs is a **directed acylic graph (DAG)**, which is a directed graph in which there are *no* cycles. In a DAG, these two terms are commonly used to denote nodes with special properties:
 * **Sink** nodes have no outgoing edges, only incoming edges
@@ -40,17 +40,17 @@ A commonly used phrase when referring to graphs is a **directed acylic graph (DA
 ## Adjacency lists
 **Adjacency list** is the most common way to represent graphs. With this approach of representing a graph, each node stores a list of its adjacent vertices. For undirected graphs, each edge from _u_ to _v_ would be stored twice: once in _u_'s list of neighbors and once in _v_'s list of neighbors.
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/adjacency_list_graph.png" width="755" height="350"/>
+<img src="https://imgur.com/JwA2sxn" width="755" height="350"/>
 
 ## Edge sets/ lists
 An **edge set** simply represents a graph as a collection of all its edges.
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/edge_set_graph.png" width="755" height="350"/>
+<img src="https://imgur.com/F2XET50" width="755" height="350"/>
 
 ## Adjacency matrix
 An **adjacency matrix** represents a graph with _n_ nodes as a _n_ by _n_ boolean matrix, in which matrix[_u_][_v_] is set to true if an edge exists from node _u_ to node _v_.
 
-<img src="https://github.com/codepath/compsci_guides/blob/graphs/graphs/figures/adjacency_matrix_graph.png" width="685" height="350"/>
+<img src="https://imgur.com/GzU4BKw" width="685" height="350"/>
 
 The representation of a graph is efficient for checking if an edge exists between a pair of vertices. However, it may be less efficient for search algorithms because it requires iterating through all the nodes in the graph to identify a node's neighbors.
 
