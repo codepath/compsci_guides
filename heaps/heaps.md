@@ -1,5 +1,3 @@
-# Heaps
-
 ## Introduction
 Heaps are an often overlooked data structure, but come up quite often in interview problems. **Heaps** are special tree based data structures that satisfy two properties:
 
@@ -7,9 +5,9 @@ Heaps are an often overlooked data structure, but come up quite often in intervi
     *  In **min heaps**, the root node contains the smallest element and all the nodes in the heap contain elements that are less than their child nodes.
     * In **max heaps**, the root node contains the largest element and all the nodes in the heap contain elements that are greater than their child nodes.
 
-2. It is a complete binary tree. A **binary treeâs** nodes will have at most two children: a left child, and right child. A heap is a complete binary tree, which means that it fills each level entirely except the last level. Another way of thinking about this is that all the nodes in one level will have children before any of those nodes will have grandchildren.
+2. It is a complete binary tree. A **binary tree's** nodes will have at most two children: a left child, and right child. A heap is a complete binary tree, which means that it fills each level entirely except the last level. Another way of thinking about this is that all the nodes in one level will have children before any of those nodes will have grandchildren.
 
-[Insert diagram here of min heap/ max heap]
+<img src="https://i.imgur.com/1mghTRv.png"/>
 
 ## Heap Operations
 In order to understand the runtimes of heap operations, it is vital to understand how insertion and deletion work within a heap.
@@ -19,14 +17,14 @@ When a new element is inserted into a heap, it is added in the next empty spot i
 
 In a min heap, if the parent of the new element is greater than it, it gets swapped with the parent. This element keeps getting **bubbled up** in the tree until it either reaches the root of the heap or it has been placed in the right order. This same process applies to max heaps as well, but the check to ensure that the node is in the proper position is that the parent node is greater than the new node.
 
-[Diagram of a swapping procedure]
+<img src="https://i.imgur.com/kx7DM60.png" width="700" height="681"/>
 
 ### Removal
 When removing from a heap, the root node is always removed. Then, the last element, the leftmost node in the last level of the heap, is removed and set as the root. This removal process retains the heap shape, but this new ordering may violate the proper ordering of the heap.
 
 In a min heap, if either one of the new element's children are less than their parent, the new element is swapped with the smaller of the two children. This element keeps getting **bubbled down** in the tree until it either reaches the last level of the heap or it has been placed in the right position. The same process applies to max heaps as well, but the ordering is such that the children are both greater than the current node.
 
-[Diagram of a swapping procedure]
+<img src="https://i.imgur.com/FGNU5Ks.png" width="700" height="681"/>
 
 ### Building a heap from a list
 One approach to building a heap from a list of N elements is starting with an empty heap and adding each item from a list, one at a time. This approach takes O(N log N) time because it performs N insertions, each of which takes log N time. However, this approach is suboptimal and the optimal approach of building a heap from N items only takes O(N) time!
@@ -41,13 +39,12 @@ With the guarantee of fullness and the binary tree property of the heap, we can 
 * Left child: (current index * 2) + 1
 * Right child: (current index * 2) + 2
 
-[insert diagram here]
+<img src="https://i.imgur.com/VHtiUsL.png" width="700" height="500"/>
 
 These calculations enable it to easily implement the insertion and removal procedures within the array.
 
 ## Runtimes
 In the worst case scenario, the swapping procedure for insertions and deletions will move the element through the height of the heap. Because heaps are binary trees that are guaranteed to be as complete as possible, the number of levels in the heap will be log n.
-
 
 | Operation                           | Runtime  |
 | ------------------------------------| -------- |
@@ -57,7 +54,7 @@ In the worst case scenario, the swapping procedure for insertions and deletions 
 | Creating a heap from a list         | O(n)     |
 
 ## Key takeaways
-* Heaps are especially useful when for getting the largest or smallest elements, and in situations where you donât care about fast lookup, delete, or search.
+* Heaps are especially useful when for getting the largest or smallest elements, and in situations where you don't care about fast lookup, delete, or search.
 * Heaps are especially useful for questions that involve getting the x-largest or x-smallest elements of some data set.
 * Building a heap only takes O(n) time, so you can potentially optimize a solution by building a heap from a list instead of running insertion n times to create the heap.
 
