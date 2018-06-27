@@ -1,6 +1,4 @@
-Binary Search Guide
-========================
-Binary search is a method for locating an element in a sorted list efficiently. Searching for an element can done naively in $O(N)$ time, but binary search speeds it up to $O(\log N)$. Binary search is a great tool to keep in mind for array problems.
+Binary search is a method for locating an element in a sorted list efficiently. Searching for an element can done naively in **O(N)** time, but binary search speeds it up to **O(log N)**. Binary search is a great tool to keep in mind for array problems.
 
 Algorithm
 ------------------
@@ -60,4 +58,4 @@ def binary_search(nums, key):
 
 ## Runtime and Space Complexity
 
-Binary search completes in $O(\log N)$ time because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because  we only need to maintain two pointers to locations in the list. Even the recursive solution has constant space with tail call optimization.
+Binary search completes in **O(log N)** time because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because  we only need to maintain two pointers to locations in the list. Even the recursive solution has constant space with tail call optimization.
