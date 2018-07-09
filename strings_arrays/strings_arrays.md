@@ -15,12 +15,10 @@ It's important to note that whenever you mutate a string, a new copy of the stri
 * In Python, you can represent a string as a list of characters and operate on the list of character instead.
 * In Java, you can utilize the [StringBuffer](https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html) class to mitigate the amount of space utilized if you need to mutate a string.
 
-
-
 ## Patterns List
 * [Two pointer](https://guides.codepath.com/compsci/Two-pointer)
 * [Binary Search](https://guides.codepath.com/compsci/Binary-Search)
-## Further reading links
+
 ### Strings
 #### General guide
 * [Coding for Interviews Strings Guide](http://blog.codingforinterviews.com/string-questions/)
