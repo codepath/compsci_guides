@@ -66,4 +66,5 @@ Binary search completes in **O(log N)** time because each iteration decreases th
 
 ## Video walkthrough
 * [HackerRank binary search video](https://www.youtube.com/watch?v=P3YID7liBug)
-* [Search a 2D matrix](https://www.youtube.com/playlist?list=PL7zKQzeqjecINi-_8CmiFLMLCCxjIHBPj)
+* [Question walkthrough: Search a 2D matrix](https://www.youtube.com/playlist?list=PL7zKQzeqjecINi-_8CmiFLMLCCxjIHBPj)
+* [Question walkthrough: Ice Cream Parlor](https://youtu.be/Ifwf3DBN1sc)
