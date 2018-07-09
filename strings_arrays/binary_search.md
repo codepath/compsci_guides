@@ -2,7 +2,7 @@ Binary search is a method for locating an element in a sorted list efficiently. 
 
 Algorithm
 ------------------
-In binary search, you are provided a list of sorted numbers and a key. The desired output is the index of the key, if it exists.
+In binary search, you are provided a list of sorted numbers and a key. The desired output is the index of the key, if it exists and None if it doesn't.
 
 Binary search is a recursive algorithm. The high level approach is that we examine the middle element of the list. The value of the middle element determines whether to terminate the algorithm (found the key), recursively search the left half of the list, or recursively search the right half of the list.
 ```
@@ -58,4 +58,12 @@ def binary_search(nums, key):
 
 ## Runtime and Space Complexity
 
-Binary search completes in **O(log N)** time because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because  we only need to maintain two pointers to locations in the list. Even the recursive solution has constant space with tail call optimization.
+Binary search completes in **O(log N)** time because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because  we only need to maintain two pointers to locations in the list. Even the recursive solution has constant space with [tail call optimization](https://en.wikipedia.org/wiki/Tail_call).
+
+## Example problems
+* [Search insert position](https://leetcode.com/problems/search-insert-position/description/)
+* [Search in a 2D matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
+
+## Video walkthrough
+* [HackerRank binary search video](https://www.youtube.com/watch?v=P3YID7liBug)
+* [Search a 2D matrix](https://www.youtube.com/playlist?list=PL7zKQzeqjecINi-_8CmiFLMLCCxjIHBPj)
