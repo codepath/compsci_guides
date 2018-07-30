@@ -12,18 +12,17 @@ Example:
 ```
 
 ## Approach #1: Merge or quick sort
+### Approach
+The problem is asking us to sort a list of integers, so we can use an algorithm like merge sort or quick sort.
 
-**Approach**
-The problem is asking us to sort a list of integers, so we could potentially use an algorithm like merge sort or quick sort. 
-
-**Time and space complexity**
-With a sorting algorithm such as is O(N log N) in the worst case. The space complexity is O(1) since we sort in place.
+### Time and space complexity
+Both of these sorting algorithms have O(n log n) worst case time complexity and, because we sort in-place, O(1) space complexity.
 
 ## Approach #2: Counting sort
-**Approach**
-We know that the numbers we are sorting are 0, 1, or 2. This leads to an efficient counting sort implementation, since we can just count the numbers of each and modify the list in place to match the counts in sorted order.
+### Approach
+We know that the numbers we are sorting are 0, 1, or 2. This means we can sort more efficiently by simply counting the numbers of times each of the three values occurs and modifying the list in-place to match the counts in sorted order.
 
-**Implementation**
+### Implementation
 ```python
 from collections import defaultdict
 def sort_colors(colors):
@@ -42,41 +41,40 @@ def sort_colors(colors):
         idx += 1
 ```
 
-**Time and space complexity**
-This solution has complexity O(N), since we loop through the list once, then loop through the dictionary to modify our list, both of which take N time. This solution takes up O(1) space, since everything is done in place and the counts dictionary has a constant size.
+### Time and space complexity
+This solution has complexity O(n), since we loop through the list once, then loop through the entire dictionary to modify our list. This solution takes up O(1) space, since everything is done in place and the dictionary has a constant size.
 
 ## Approach #3: Three-way partition
 This approach uses multiple pointers. Reading the [two pointer guide](https://guides.codepath.com/compsci/Two-pointer) may be helpful.
 
-**Approach**
-Although we cannot asymptotically do better than O(N) since we need to pass through the list at least once, we can limit our code to only making one pass. This will be slightly faster than approach #2.
+### Approach
+Although we cannot asymptotically do better than O(n), since we need to pass through the list at least once, we can limit our code to only making one pass. This will be slightly faster than approach #2.
 
-We can accomplish this by seeing that sorting an array with three distinct elements is equivalent to a `partition` operation. Recall that in quick sort, we partition an array to put all elements less than a pivot to the left and greater than to a right. Since we only have three potential values in our list, partitioning using the middle value as a pivot will effectively sort the list.
+We can accomplish this by recognizing that sorting an array with three distinct elements is equivalent to a partition operation. Recall that in quick sort, we partition an array to put all elements with values less than a pivot on the left and elements with values greater than a pivot to a right. Since we only have three potential values in our list, partitioning using the middle value as a pivot will effectively sort the list.
 
 This particular type of partition is a bit tricky though because we're partitioning on the middle element (the 1's) of our list. It's called a three-way partition, since we are also grouping together elements that are equal in the middle (the 1's).
 
 
-**Implementation**
-
+### Implementation
 ```python
 def sort_colors(colors):
     left, middle, right = 0, 0, len(colors) - 1
     while middle <= right:
         if colors[middle] == 0:
-            colors[middle], colors[left] = colors[left], colors[middle] 
+            colors[middle], colors[left] = colors[left], colors[middle]
             left += 1
             middle += 1
         elif colors[middle] == 1:
             middle += 1
         elif colors[middle] == 2:
-            colors[middle], colors[right] = colors[right], colors[middle] 
+            colors[middle], colors[right] = colors[right], colors[middle]
             right -= 1
             middle += 1
 ```
 
 
-**Time and space complexity**
-This solution has also has complexity O(N), but only takes one pass since it uses two pointers that stop moving when one moves past the other.
+### Time and space complexity
+This solution has also has time complexity O(n), but only takes one pass since it uses two pointers that stop moving when one moves past the other.
 
 It is slightly faster than the counting sort and is O(1) space, since it is in-place.
 

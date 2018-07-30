@@ -1,10 +1,10 @@
-Binary search is a method for locating an element in a sorted list efficiently. Searching for an element can done naively in **O(N)** time, but binary search speeds it up to **O(log N)**. Binary search is a great tool to keep in mind for array problems.
+Binary search is a technique for efficiently locating an element in a sorted list. Searching for an element can done naively in **O(n)** time by checking every element in the list, but binary search's optimization speeds it up to **O(log n)**. Binary search is a great tool to keep in mind for array problems.
 
 Algorithm
 ------------------
-In binary search, you are provided a list of sorted numbers and a key. The desired output is the index of the key, if it exists and None if it doesn't.
+In binary search, you are provided a sorted list of numbers and a key. The desired output of a binary search is the index of the key in the sorted list, if the key is in the list, or ```None``` otherwise.
 
-Binary search is a recursive algorithm. The high level approach is that we examine the middle element of the list. The value of the middle element determines whether to terminate the algorithm (found the key), recursively search the left half of the list, or recursively search the right half of the list.
+Binary search is a recursive algorithm. From a high-level perspective, we examine the middle element of the list, which determines whether to terminate the algorithm (found the key), recursively search the left half of the list (middle element value > key), or recursively search the right half of the list (middle element value < key).
 ```
 def binary_search(nums, key):
     if nums is empty:
@@ -13,7 +13,7 @@ def binary_search(nums, key):
         return middle index
     if middle element is greater than key:
         binary search left half of nums
-    if middle element is less than 
+    if middle element is less than
         binary search right half of nums
 ```
 
@@ -21,12 +21,12 @@ There are two canonical ways of implementing binary search: recursive and iterat
 
 ### Recursive Binary Search
 
-The recursive solution utilizes a helper function to keep track of pointers to the section of the list we are currently examining. The search either completes when we find the key, or the two pointers meet.
+The recursive approach utilizes a helper function to keep track of pointers to the section of the list we are currently examining. The search either terminates when we find the key or if the two pointers meet.
 
 ```python
 def binary_search(nums, key):
     return binary_search_helper(nums, key, 0, len(nums))
-    
+
 def binary_search_helper(nums, key, start_idx, end_idx):
     middle_idx = (start_idx + end_idx) // 2
     if start_idx == end_idx:
@@ -41,7 +41,7 @@ def binary_search_helper(nums, key, start_idx, end_idx):
 
 ### Iterative Binary Search
 
-The iterative solution manually keeps track of the section of the list we are examining, using the two-pointer technique. The search either completes when we find the key, or the two pointers meet.
+The iterative approach manually keeps track of the section of the list we are examining using the two-pointer technique. The search either terminates when we find the key, or the two pointers meet.
 ```python
 def binary_search(nums, key):
     left_idx, right_idx = 0, len(nums)
@@ -58,7 +58,7 @@ def binary_search(nums, key):
 
 ## Runtime and Space Complexity
 
-Binary search completes in **O(log N)** time because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because  we only need to maintain two pointers to locations in the list. Even the recursive solution has constant space with [tail call optimization](https://en.wikipedia.org/wiki/Tail_call).
+Binary search has **O(log n)** time complexity because each iteration decreases the size of the list by a factor of 2. Its space complexity is constant because we only need to maintain two pointers. Even the recursive solution has constant space with [tail call optimization](https://en.wikipedia.org/wiki/Tail_call).
 
 ## Example problems
 * [Search insert position](https://leetcode.com/problems/search-insert-position/description/)
