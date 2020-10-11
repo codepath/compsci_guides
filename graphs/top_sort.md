@@ -23,7 +23,7 @@ def top_sort(graph):
   return list(sorted_nodes)
  
 
-def dfs(graph, start_node, visited, sorted\_nodes):
+def dfs(graph, start_node, visited, sorted_nodes):
   visited.add(start_node)
   if start_node in graph:
       neighbors = graph[start_node]
