@@ -11,7 +11,8 @@ address_book.get("Bob")
 '111-222-3333'
 ```
 
-Hash tables are very efficient â their insertion, deletion, and get operations take, on average, constant time.
+Hash tables are very efficient.  Operations such as insertion, deletion, and get take, on average, constant time.
+
 ## How it works:
 ### Hash Codes
 Internally,a hash table stores its values in an array. A special **hash function** is utilized to convert each key into a code, which is then converted into an index into the underlying array. This hash function has a hard requirement to return the same hash code for equal keys.

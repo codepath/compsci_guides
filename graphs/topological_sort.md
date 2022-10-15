@@ -1,4 +1,4 @@
-## Introduction
+## Introduction to Topological Sorting
 Aside from DFS and BFS, the most common graph concept that interviews will test is topological sorting. Topological sorting produces a linear ordering of nodes in a directed graph such that the direction of edges is respected. 
 
 A **topological sort** is an ordering of nodes for a directed acyclic graph (DAG) such that for every directed edge _uv_ from vertex _u_ to vertex _v_, _u_ comes before _v_ in the ordering.

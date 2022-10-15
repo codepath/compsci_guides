@@ -1,3 +1,5 @@
+### Introduction
+
 Binary search is a technique for efficiently locating an element in a sorted list. Searching for an element can done naively in **O(n)** time by checking every element in the list, but binary search's optimization speeds it up to **O(log n)**. Binary search is a great tool to keep in mind for array problems.
 
 Algorithm
