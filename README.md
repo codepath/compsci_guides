@@ -1,5 +1,7 @@
 # Computer Science Guides
 
+DANCEMAN IS BACK 3!!!
+
 Guides focused on fundamental computer science concepts. 
 
  * Check the [wiki](https://github.com/codepath/compsci_guides/wiki) to review or update content.
