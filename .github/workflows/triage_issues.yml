@@ -1,10 +1,8 @@
 name: Triage Wiki Issues with Claude
 
 on:
-  schedule:
-    - cron: '0 9 * * 1-5'  # Runs every weekday at 9am UTC
   issues:
-    types: [opened]         # Also runs immediately when a new issue is opened
+    types: [opened]         # Runs immediately when a new issue is opened
   workflow_dispatch:        # Allows manual runs from the Actions tab
 
 jobs:
