@@ -1,0 +1,36 @@
+
+name: Triage Wiki Issues with Claude
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-5'  # Runs every weekday at 9am UTC
+  issues:
+    types: [opened]         # Also runs immediately when a new issue is opened
+  workflow_dispatch:        # Allows manual runs from the Actions tab
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic PyGithub requests
+
+      - name: Run issue triage
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_NAME: ${{ github.repository }}
+          TRIGGER_ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: python .github/scripts/triage_issues.py
