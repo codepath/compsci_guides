@@ -13,7 +13,7 @@ import re
 import json
 import requests
 import anthropic
-from github import Github
+from github import Github, Auth
 from datetime import datetime
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -239,7 +239,7 @@ def process_issue(issue, repo) -> dict | None:
 
 
 def main():
-    g = Github(GITHUB_TOKEN)
+    g = Github(auth=Auth.Token(GITHUB_TOKEN))
     repo = g.get_repo(REPO_NAME)
 
     ensure_label_exists(repo, ALREADY_TRIAGED_LABEL, "0075ca", "Triaged by Claude")
